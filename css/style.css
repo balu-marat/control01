@@ -638,6 +638,39 @@ html, body {
 
 .reviews {
   background: url(../img/lambd.jpg);
+  background-size: cover;
+}
+
+.reviews__group {
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 15px 0;
+  max-width: 770px;
+  min-height: 160px;
+  margin: 0 auto;
+}
+
+.reviews__title {
+  font-family: "Yeseva One";
+  font-weight: 400;
+  font-size: 2.25rem;
+  color: #ffffff;
+}
+
+.reviews {
+  --fill-dark: #ffffff;
+}
+
+.reviews__text {
+  font-family: "Gentium Book Basic";
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 45px;
+  color: #dde0df;
+}
+
+.image__decor {
+  height: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
