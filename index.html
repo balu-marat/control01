@@ -24,6 +24,12 @@
                           <a href="#" class="nav__link">Reviews</a>
                           <a href="#" class="nav__link">Reservations</a>
                       </nav>
+                      <button class="hamburger hamburger--collapse" type="button">
+                        <span class="hamburger-box">
+                          <span class="hamburger-inner"></span>
+                        </span>
+                      </button>
+                      
                       <div class="social">
                           <a href="#" class="social__icon"><i class="fa fa-twitter"></i></a>
                           <a href="#" class="social__icon"><i class="fa fa-youtube"></i></a>
@@ -220,7 +226,7 @@
                     
                     <div class="reservation__top">
                         <h3 class="reservation__title">Just the right food</h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="image-decor ">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="image-decor image-decor--golden">
                         <use xlink:href="img/decor2.svg#decor"/>
                         </svg>
                         <p class="reservation__text">If you've been to one of you restaurants, you've seen-and<br>
@@ -239,7 +245,7 @@
                                 </form>
                                 <h4 class="label">Date</h4>
                                 <form action="#">
-                                    <input type="text" placeholder="date *" class="name">
+                                    <input type="text" placeholder="date *" class="name"><i class="fa fa-calendar"></i>
                                 </form>
                             </div>
                             <div class="form-number">
@@ -274,7 +280,7 @@
                     </article>
                     <article class="footer__item">
                         <h4 class="footer__title">Opening Hours</h4>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="image-decor ">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="image-decor image-decor--colored">
                             <use xlink:href="img/decor2.svg#decor"/>
                         </svg>
                         <p class="footer__text">Mon-Thu: 7:00am-8:00pm<br>
@@ -290,7 +296,7 @@
                     </article>
                     <article class="footer__item">
                         <h4 class="footer__title">Our Location</h4>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="image-decor ">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="image-decor image-decor--colored">
                             <use xlink:href="img/decor2.svg#decor"/>
                         </svg>
                         <p class="footer__text">19th Paradise Street Sitia<br>
@@ -312,7 +318,14 @@
       </div>
  
 
-
+      <script>
+        var hamburger = document.querySelector(".hamburger");
+        var nav = document.querySelector(".nav");
+        hamburger.addEventListener("click", function() {
+          hamburger.classList.toggle("is-active");
+          nav.classList.toggle("is-active");
+        });
+      </script>
 
 </body>
 

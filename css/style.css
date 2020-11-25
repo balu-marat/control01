@@ -402,9 +402,133 @@ html, body {
   padding: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
+.hamburger {
+  padding: 15px 15px;
+  display: none;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+@media screen and (max-width: 1250px) {
+  .hamburger {
+    display: inline-block;
+  }
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #fff;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse .hamburger-inner::after {
+  top: -20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+
+.hamburger--collapse .hamburger-inner::before {
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse.is-active .hamburger-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--collapse.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+}
+
+.hamburger--collapse.is-active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(-90deg);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
 .header {
-  background: url(../img/banner.png) right 0/cover;
+  background: url(../img/banner.jpg) right 0/cover;
   padding-bottom: 3rem;
+  padding-bottom: 3rem;
+  box-shadow: inset 0 110px 5px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 1250px) {
+  .header {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 860px) {
+  .header {
+    background: url(../img/banner1.jpg);
+    max-width: 100%;
+  }
 }
 
 .header__top {
@@ -424,6 +548,23 @@ html, body {
 .nav {
   margin-left: 133px;
 }
+@media screen and (max-width: 1250px) {
+  .nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    aline-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    position: relative;
+    left: -110%;
+    padding: 2rem 0;
+    transition: 0.5s;
+  }
+  .nav.is-active {
+    left: 0;
+  }
+}
 
 .nav__link {
   font-family: "Gentium Book Basic";
@@ -432,6 +573,19 @@ html, body {
   font-size: 1.3125rem;
   color: #ffffff;
   text-decoration: none;
+}
+@media screen and (max-width: 1250px) {
+  .nav__link {
+    padding: 1rem;
+  }
+}
+.nav__link:hover {
+  border-bottom: 1px solid #fff;
+}
+@media screen and (max-width: 1250px) {
+  .nav__link:hover {
+    border-bottom: none;
+  }
 }
 
 .social__icon {
@@ -488,6 +642,7 @@ html, body {
 .about__top {
   display: flex;
   text-align: center;
+  padding-top: 60px;
 }
 .about__title {
   font-family: "Yeseva One";
@@ -680,6 +835,138 @@ html, body {
 .reviews__slogan {
   font-family: "Gentium Book Basic";
   font-size: 1rem;
+}
+
+.reservation__group {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 100px;
+}
+
+.reservation {
+  position: relative;
+  --fill-dark: #cc9900;
+}
+
+.image-decor--golden {
+  text-align: center;
+  height: 20px;
+}
+
+.meat {
+  padding-left: 60px;
+}
+
+.form__group {
+  display: flex;
+}
+
+.reservation__title {
+  font-family: "Yeseva One";
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 1.5rem;
+  color: #cc9900;
+  text-align: center;
+}
+
+.reservation__text {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #4c4c4c;
+  text-align: center;
+}
+
+.form__btn {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.5625rem 3.75rem;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: rgba(200, 159, 45, 0.98);
+  border: 1px solid #c89f2d;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #c9a131;
+  font-weight: 700;
+  font-family: "Open Sans";
+}
+
+.name {
+  padding: 9px 10px 9px 15px;
+  font-size: 1rem;
+  color: #7c7c7c;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Open Sans";
+  border: 1px solid #e1d1a4;
+}
+
+.footer {
+  background-color: #191919;
+  --fill-dark: #fff;
+}
+
+.footer__group {
+  padding-top: 50px 0;
+  display: grid;
+  max-width: 1100px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer__title {
+  font-family: "Yeseva One";
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.3125rem;
+  line-height: 1.5rem;
+  color: #fefefe;
+}
+
+.footer__text {
+  font-family: "Open Sans";
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  color: #ffffff;
+}
+
+.image-decor--colored {
+  padding-left: 100px;
+}
+
+.social__footer {
+  text-align: center;
+}
+
+.social__icon--colored {
+  color: #fff;
+}
+
+.payments {
+  text-align: center;
+}
+
+.payments-card {
+  text-decoration: none;
+  padding: 0 5px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+  font-weight: 700;
+  font-family: "Open Sans";
+  border: 1px solid #ffffff;
+  background: #fff;
+  border-radius: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */
