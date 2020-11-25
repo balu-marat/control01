@@ -3,10 +3,11 @@
     --fill-dark: #cc9900
 
     &__top 
-       display: flex
-       text-align: center
-       padding-top: 60px
-       
+        text-align: center
+        padding-top: 60px
+        +media(1200px)
+            display: flex
+
     &__title 
         font-family: "Yeseva One"
         font-size: 2.25rem
@@ -21,6 +22,14 @@
         color: #4c4c4c
     &__cook 
         margin-left: 65px
-        
+.about__img
+    max-width: 100%
+
+.about__images, .about__motto
+    +media(1200px)
+        flex-basis: 50%
+
+
+    
             
             

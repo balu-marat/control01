@@ -1,141 +1,95 @@
-.hamburger 
-  padding: 15px 15px
-  display: none
-  +media(1250px)
-    display: inline-block
-  cursor: pointer
-  transition-property: opacity, filter
-  transition-duration: 0.15s
-  transition-timing-function: linear
-  font: inherit
-  color: inherit
-  text-transform: none
-  background-color: transparent
-  border: 0
-  margin: 0
-  overflow: visible
-.hamburger:hover 
-  opacity: 0.7
-.hamburger.is-active:hover 
-  opacity: 0.7
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after 
-  background-color: #fff
-
-.hamburger-box 
-  width: 40px
-  height: 24px
-  display: inline-block
-  position: relative
-
-.hamburger-inner 
-  display: block
-  top: 50%
-  margin-top: -2px
-.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after 
-  width: 40px
-  height: 4px
-  background-color: #fff
-  border-radius: 4px
-  position: absolute
-  transition-property: transform
-  transition-duration: 0.15s
-  transition-timing-function: ease
-.hamburger-inner::before, .hamburger-inner::after 
-  content: ""
-  display: block
-.hamburger-inner::before 
-  top: -10px
-.hamburger-inner::after
-  bottom: -10px
-.hamburger--collapse .hamburger-inner 
-  top: auto
-  bottom: 0
-  transition-duration: 0.13s
-  transition-delay: 0.13s
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
-.hamburger--collapse .hamburger-inner::after 
-  top: -20px
-  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear
-.hamburger--collapse .hamburger-inner::before 
-  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19)
-
-.hamburger--collapse.is-active .hamburger-inner 
-  transform: translate3d(0, -10px, 0) rotate(-45deg)
-  transition-delay: 0.22s
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
-.hamburger--collapse.is-active .hamburger-inner::after 
-  top: 0
-  opacity: 0
-  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear
-.hamburger--collapse.is-active .hamburger-inner::before 
-  top: 0
-  transform: rotate(-90deg)
-  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1)
-
-
-
 .header
+  position: relative
   background: url(../img/banner.jpg) right 0 / cover
+  
   padding-bottom: 3rem
-  +media(1250px)
-    max-width: 100%
-  +media(860px) 
-     background: url(../img/banner1.jpg) 
-     max-width: 100%
-  padding-bottom: 3rem
-  box-shadow: inset 0 110px 5px rgba(0, 0, 0, .1)
-// .lg 
-//   background: linear-gradient(to bottom, #0000, #ffffff)
+
+  
+  
+  
+
 
 .header__top
   display: flex
+  align-items: center
+ 
+
+
+
+ 
+.logo__img
+  margin: 0 auto
+  transform: translateX(25px)
+  +media(992px)
+    margin-left: 0
+    transform: none
+  
+
+.nav-wrap
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: rgba(#000, .8)
+  z-index: 100
+  display: flex
+  flex-direction: column
   justify-content: space-around
   align-items: center
-  
-.logo
-  font-family: "Yeseva One"
-  font-weight: 400
-  font-size: 1.875rem
-  color: #ffffff
-  text-transform: uppercase
+  opacity: 0
+  visibility: hidden
+  transition: .5s
+  +media(992px)
+    position: static
+    opacity: 1
+    visibility: visible
+    background: unset
+    flex-direction: row
 
+  &.is-active
+    opacity: 1
+    visibility: visible
+
+.hamburger
+  position: relative
+  z-index: 101
+  +media(992px)
+    display: none
+
+.fixed
+  overflow: hidden
+
+   
 .nav
-  margin-left: 133px
-  +media(1250px)
-    width: 100%
-    height: auto
-    display: flex
-    flex-direction: column
-    aline-items: center
-    background: rgba(0, 0, 0, .6)
-    position: relative
-    left: -110%
-    padding: 2rem 0
-    transition: .5s
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-top: 2rem
+  +media(992px)
+    flex-direction: row
+    padding: 0
+    margin-right: 1rem
 
-    &.is-active
-      left: 0
+ 
 .nav__link
   font-family: "Gentium Book Basic"
   font-weight: 700
-  margin-left: 40px
   font-size: 1.3125rem
   color: #ffffff
   text-decoration: none
-  +media(1250px)
-    padding: 1rem
-
+  margin-bottom: 2rem
+  border-bottom: 1px solid transparent
+  +media(992px)
+    margin: 0 1rem 0 0
+  +media(1200px)
+    margin-right: 3rem
+ 
   &:hover
-    border-bottom: 1px solid #fff
-    +media(1250px)
-      border-bottom: none
-
+    border-color: #fff
+   
 
 .social__icon
-  // +media(1250px)
-  // display: none
   font-family: "Font Awesome"
   font-size: 1.125rem
   color: #dab33e
@@ -151,12 +105,28 @@
   font-size: 4.875rem
   color: #ffffff
   filter: drop-shadow(0.469px 0.883px 1px rgba(1, 1, 1, 0.64))
+  +media(320px) 
+    font-size: 1.5rem
+  +media(768px)
+    font-size: 2.85rem
+  +media(992px)
+    font-size: 4.85rem 
+ 
 
 .content__images
   padding-top: 20px
+  +media(320px)
+    width: 150px
+  +media(992px)
+    width: 200px
+
+  
 
 .content__btn
   padding-top: 30px
+  +media(992px)
+
+ 
 
 .btn
   display: inline-block
@@ -167,10 +137,12 @@
   padding: 1rem 2.125rem
   color: #ffffff
   border: none
+  margin-bottom: 1rem
 
 .btn__item--black
   background: rgba(0, 0, 0, 0.512)
 
 .btn__item--white
   background: #ffffff4d
-  margin-left: 20px
+  +media(992px)
+    margin-left: 15px

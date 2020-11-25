@@ -1,8 +1,8 @@
 =media($size)
-    @media screen and (max-width: $size)
+
+
+    @media screen and (min-width: $size)
         @content
-
-
 
 @function rem($px)
     @return $px / 16px + 0rem
