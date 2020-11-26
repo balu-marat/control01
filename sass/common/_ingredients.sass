@@ -1,13 +1,19 @@
 
-// .ingredients 
-//         background: url(../img/ingredients.jpg) right 0 / cover
-//         width: 100%
+.ingredients 
+        background: url(../img/ingredients.jpg) right 0 / cover
+        max-width: 100%
+        padding: 5rem 0
+                
+         
 .ingredients__group 
         text-align: center
         background: rgba(0, 0, 0, .5)
-        // +media(768px)
-        //         background: url(../img/ingred1.jpg)
+        padding: 1rem 1rem
 
+.ingredients__container
+        +media(768px)
+                display: flex
+                justify-content: flex-end
         
 .ingredients__title 
         font-family: "Yeseva One"
@@ -29,5 +35,3 @@
         line-height: 1.5rem
         color: #ffffff       
 
-.res-img 
-        width: 100%
