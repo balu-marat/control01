@@ -1,62 +1,65 @@
 
     
 .menu__group 
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-    grid-template-rows: repeat(1, minmax(500px, auto)) 
-    row-gap: 2rem
-    column-gap: 10rem
-    min-height: 990px
+    +media(460px)
+        display: flex
+        justify-content: space-between
 
-.menu__item 
-    padding: 1rem
 
-.Appetisers 
+
+
+.Appetisers
     text-align: center
-.menu
-    --fill-dark: #cc9900
 .menu__title 
     font-family: "Yeseva One"
     font-weight: 400
-    font-size: 2.25rem
+    font-size: 1.5rem
+    // font-size: 2.25rem
     line-height: 1.5rem
     color: #cc9900
-    margin-top: 5rem
-    
    
+
 .menu__text 
-        font-family: "Yeseva One"
-        font-size: 1rem
-        opacity: .8
-.menu__decor 
-    text-align: center
+    font-family: "Yeseva One"
+    font-size: 1rem
+    opacity: .8
+.menu
+    --fill-dark: #cc9900
+    
+.price__title 
+    font-family: "Yeseva One" 
+    font-weight: 400  
+    font-size: 1.2125rem
+    line-height: 1.5rem
+    color: #c89f2d
+.price__item 
+    
+    color: #cc9900
+.image-decor 
+    width: 150px
+    height: 30px
 .price 
     display: flex
     aligh-items: center
     justify-content: space-between
-    border-bottom: 1px solid #cc9900
-    &__title 
-        font-family: "Yeseva One" 
-        font-weight: 400  
-        font-size: 1.3125rem
-        line-height: 1.5rem
-        color: #c89f2d
-    &__item 
-        color: #cc9900
+    border-bottom: 1px solid #cc9900 
     
-.price-special 
-    outline: 1px solid  #cc9900
-    padding: 5px 10px
-   
-
 .Salads 
     text-align: center
 
-.image-decor
-    width: 250px
-    height: 50px
+.price__special
+    outline: 1px solid  #cc9900
+    padding: 5px 5px
+.price__gusto 
+    padding-top: 1rem 
+.price-btn 
+    padding: 3px 9px
+    border: none
+    background: #cc9900
+    color: #ffffff
+    max-width: 100%
+    opacity: .7
 
+.Starters 
+    text-align: center
 
-
-
-    
