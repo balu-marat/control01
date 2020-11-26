@@ -14,6 +14,10 @@
         line-height: 1.5rem
         color: #cc9900
         font-weight: 400
+        +media(320px)
+            font-size: 1.5rem
+        +media(768px) 
+            font-size: 2.25rem
     &__text 
         font-family: "Lato"
         font-weight: 400
@@ -28,8 +32,10 @@
 .about__images, .about__motto
     +media(1200px)
         flex-basis: 50%
-
-
-    
+.image__decor 
+    +media(320px)
+        width: 150px
+    +media(768px)
+        width: 200px
             
             
