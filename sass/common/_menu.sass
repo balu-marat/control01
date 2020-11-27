@@ -1,11 +1,23 @@
 
     
-.menu__group 
-    +media(460px)
+.menu__group
+    
+    +media(480px)
+        max-width: 70%
+        margin: 0 auto
+    +media(768px)
         display: flex
         justify-content: space-between
+        padding: 60px 0
+        max-width: 100%
+        margin: 0
+.menu__item
+    +media(768px)
+        flex-basis: 50%
 
-
+.menu-starter
+    +media(768px)
+        margin-right: 10vw
 
 
 .Appetisers
@@ -14,9 +26,10 @@
     font-family: "Yeseva One"
     font-weight: 400
     font-size: 1.5rem
-    // font-size: 2.25rem
     line-height: 1.5rem
     color: #cc9900
+    +media(992px)
+        font-size: 2.25rem
    
 
 .menu__text 
@@ -32,12 +45,15 @@
     font-size: 1.2125rem
     line-height: 1.5rem
     color: #c89f2d
+    +media(992px)
+        font-size: 1.3125rem
 .price__item 
-    
     color: #cc9900
 .image-decor 
     width: 150px
     height: 30px
+    +media(992px)
+        width: 200px
 .price 
     display: flex
     aligh-items: center
@@ -62,4 +78,10 @@
 
 .Starters 
     text-align: center
+
+.menu-btn 
+    display: flex
+    justify-content: flex-end
+    margin-right: -1
+
 
