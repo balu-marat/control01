@@ -1,53 +1,68 @@
 
-.reservation__group
-    display: flex
-    justify-content: space-around
-    padding-top: 100px
+
+
 .reservation 
-    position: relative  
+    text-align: center
+    padding: 1rem 0
     --fill-dark: #cc9900
 
-
-
-.image-decor--golden
+.reservation__group 
+    +media(992px)
+        display: flex
+        padding: 80px 0
+.reservation-images
     text-align: center
-    height: 20px
-.meat 
-    padding-left: 60px
-.form__group 
-    display: flex
+    +media(480px)
+        display: flex
+        justify-content: center
+    +media(991px)
+        width: 50%
+
+.reservation__form 
+    +media(992px)
+        margin-left: 100px
+        width: 50%
+.meat
+    padding-bottom: 1rem
+
 .reservation__title 
     font-family: "Yeseva One"
     font-weight: 400
-    font-size: 2.25rem
+    font-size: 1.55rem
+    +media(992px)
+        font-size: 2.25rem
+        margin-top: 0
     line-height: 1.5rem
     color: #cc9900
-    text-align: center
-
+.image-decor--golden 
+    width: 150px
+    height: 30px
+    +media(992px)
+    width: 200px
+.reservation__img-wrap
+    padding-bottom: 1rem
+    +media(480px)
+        &:last-child
+            margin-left: 1rem
+.reservation__img
+    height: 100%
+    max-width: 100%
+    object-fit: cover
 .reservation__text
     font-family: "Lato" 
     font-weight: 400
     font-size: 1rem
     line-height: 1.5rem
     color: #4c4c4c
-    text-align: center
-
-.form__btn
-    display: block
-    text-align: center
-    margin: 0 auto 
-    padding: 0.5625rem 3.75rem
+   
+.label
+    // justify-content: flex-start 
     font-family: "Open Sans"
-    font-weight: 400
-    font-size: 1rem
-    color: #ffffff
-    background-color: rgba(200,159,45,0.98)
-    border: 1px solid #c89f2d
-.label 
     font-size: 0.875rem
     color: #c9a131
     font-weight: 700
-    font-family: "Open Sans"
+
+    
 .name
     padding: 9px 10px 9px 15px
     font-size: 1rem
@@ -57,4 +72,34 @@
     font-family: "Open Sans"
     border: 1px solid #e1d1a4
 
-
+.form__btn
+    display: block
+    text-align: center
+    margin: 0 auto 
+    padding: 0.5625rem 2.75rem
+    font-family: "Open Sans"
+    font-weight: 400
+    font-size: 1rem
+    color: #ffffff
+    background-color: rgba(200,159,45,0.98)
+    border: 1px solid #c89f2d
+.form-number 
+    padding-bottom: 1.5rem
+    +media(480px)
+        margin-left: 1.5rem
+    +media(992px)
+        margin-left: 1.5rem
+.form__group
+    
+    +media(480px)
+        display: flex
+        justify-content: center
+        margin-left: 2rem
+    +media(992px) 
+        display: flex
+        max-height: 508px
+.cherry 
+    margin-left: 1.5rem
+.label__form 
+    +media(480px)
+    text-align: left
