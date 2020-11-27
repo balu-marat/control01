@@ -1,20 +1,25 @@
 .reviews
-    background: url(../img/lambd.jpg)
+    background: url(../img/lambd.jpg) 100% 100% no-repeat
     background-size: cover
+    padding: 5rem 0
+
 .reviews__group
     background: rgba(0, 0, 0, .7) 
     text-align: center
-    // padding: 15px 0 
-    max-width: 750px
+    padding: 1rem 1rem
+    max-width: 700px
     max-height: 570px
     margin: 0 auto
 
+
 .reviews__title 
-        font-family: "Yeseva One"
-        font-weight: 400
+    font-family: "Yeseva One"
+    font-weight: 400
+    font-size: 1.5rem
+    +media(992px)
         font-size: 2.25rem
-        color: #ffffff
-        padding-top: 90px 
+    color: #ffffff
+    
        
 .reviews 
     --fill-dark: #ffffff
@@ -22,7 +27,9 @@
 .reviews__text
     font-family: "Gentium Book Basic"
     font-weight: 700 
-    font-size: 25px
+    font-size: 1rem
+    +media(992px)
+        font-size: 1.5625rem
     line-height: 45px
     color: #dde0df
 
