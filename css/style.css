@@ -517,6 +517,10 @@ html {
   align-items: center;
 }
 
+.about__cook {
+  padding-top: 1rem;
+}
+
 .logo__img {
   margin: 0 auto;
   transform: translateX(25px);
@@ -624,6 +628,8 @@ html {
 .content__title {
   font-family: "Yeseva One";
   font-weight: 400;
+  max-width: 970px;
+  margin: 0 auto;
   font-size: 4.875rem;
   color: #ffffff;
   filter: drop-shadow(0.469px 0.883px 1px rgba(1, 1, 1, 0.64));
@@ -716,6 +722,8 @@ html {
   }
 }
 .about__text {
+  max-width: 470px;
+  margin: 0 auto;
   font-family: "Lato";
   font-weight: 400;
   font-size: 1rem;
@@ -747,9 +755,22 @@ html {
   }
 }
 
+.ingredients {
+  background: url(../img/ingredients.jpg) right 0/cover;
+  padding: 5rem 0;
+}
+
 .ingredients__group {
   text-align: center;
   background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .ingredients__container {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .ingredients__title {
@@ -774,40 +795,57 @@ html {
   font-size: 1rem;
   line-height: 1.5rem;
   color: #ffffff;
+  max-width: 430px;
+}
+@media screen and (min-width: 480px) {
+  .ingredients__text {
+    text-align: center;
+  }
 }
 
-.res-img {
-  width: 100%;
+@media screen and (min-width: 480px) {
+  .menu__group {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu__group {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+    max-width: 100%;
+    margin: 0;
+  }
 }
 
-.menu__group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, minmax(500px, auto));
-  row-gap: 2rem;
-  column-gap: 10rem;
-  min-height: 990px;
+@media screen and (min-width: 768px) {
+  .menu__item {
+    flex-basis: 50%;
+  }
 }
 
-.menu__item {
-  padding: 1rem;
+@media screen and (min-width: 768px) {
+  .menu-starter {
+    margin-right: 10vw;
+  }
 }
 
 .Appetisers {
   text-align: center;
 }
 
-.menu {
-  --fill-dark: #cc9900;
-}
-
 .menu__title {
   font-family: "Yeseva One";
   font-weight: 400;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   line-height: 1.5rem;
   color: #cc9900;
-  margin-top: 5rem;
+}
+@media screen and (min-width: 992px) {
+  .menu__title {
+    font-size: 2.25rem;
+  }
 }
 
 .menu__text {
@@ -816,8 +854,35 @@ html {
   opacity: 0.8;
 }
 
-.menu__decor {
-  text-align: center;
+.menu {
+  --fill-dark: #cc9900;
+}
+
+.price__title {
+  font-family: "Yeseva One";
+  font-weight: 400;
+  font-size: 1.2125rem;
+  line-height: 1.5rem;
+  color: #c89f2d;
+}
+@media screen and (min-width: 992px) {
+  .price__title {
+    font-size: 1.3125rem;
+  }
+}
+
+.price__item {
+  color: #cc9900;
+}
+
+.image-decor {
+  width: 150px;
+  height: 30px;
+}
+@media screen and (min-width: 992px) {
+  .image-decor {
+    width: 200px;
+  }
 }
 
 .price {
@@ -826,50 +891,71 @@ html {
   justify-content: space-between;
   border-bottom: 1px solid #cc9900;
 }
-.price__title {
-  font-family: "Yeseva One";
-  font-weight: 400;
-  font-size: 1.3125rem;
-  line-height: 1.5rem;
-  color: #c89f2d;
-}
-.price__item {
-  color: #cc9900;
-}
-
-.price-special {
-  outline: 1px solid #cc9900;
-  padding: 5px 10px;
-}
 
 .Salads {
   text-align: center;
 }
 
-.image-decor {
-  width: 250px;
-  height: 50px;
+.price__special {
+  outline: 1px solid #cc9900;
+  padding: 5px 5px;
+}
+
+.price__gusto {
+  padding-top: 1rem;
+}
+
+.price-btn {
+  padding: 3px 9px;
+  border: none;
+  background: #cc9900;
+  color: #ffffff;
+  max-width: 100%;
+  opacity: 0.7;
+}
+
+.Starters {
+  text-align: center;
+}
+
+.menu-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -1;
 }
 
 .reviews {
-  background: url(../img/lambd.jpg);
+  background: url(../img/lambd.jpg) 100% 100% no-repeat;
   background-size: cover;
+  padding: 5rem 0;
 }
 
 .reviews__group {
   background: rgba(0, 0, 0, 0.7);
   text-align: center;
-  max-width: 750px;
+  padding: 1rem 1rem;
+  max-width: 700px;
   max-height: 570px;
   margin: 0 auto;
+  line-height: 30px;
+}
+
+.main-img {
+  width: 25px;
+  padding-bottom: 0.7rem;
+  margin-right: 1rem;
 }
 
 .reviews__title {
   font-family: "Yeseva One";
   font-weight: 400;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   color: #ffffff;
-  padding-top: 90px;
+}
+@media screen and (min-width: 992px) {
+  .reviews__title {
+    font-size: 2.25rem;
+  }
 }
 
 .reviews {
@@ -879,9 +965,14 @@ html {
 .reviews__text {
   font-family: "Gentium Book Basic";
   font-weight: 700;
-  font-size: 25px;
-  line-height: 45px;
+  font-size: 1rem;
   color: #dde0df;
+}
+@media screen and (min-width: 992px) {
+  .reviews__text {
+    font-size: 1.5625rem;
+    line-height: 45px;
+  }
 }
 
 .image__decor {
@@ -893,37 +984,77 @@ html {
   font-size: 1rem;
 }
 
-.reservation__group {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 100px;
-}
-
 .reservation {
-  position: relative;
+  text-align: center;
+  padding: 1rem 0;
   --fill-dark: #cc9900;
 }
 
-.image-decor--golden {
+@media screen and (min-width: 992px) {
+  .reservation__group {
+    display: flex;
+    padding: 80px 0;
+  }
+}
+
+.reservation-images {
   text-align: center;
-  height: 20px;
+}
+@media screen and (min-width: 480px) {
+  .reservation-images {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 991px) {
+  .reservation-images {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .reservation__form {
+    margin-left: 100px;
+    width: 50%;
+  }
 }
 
 .meat {
-  padding-left: 60px;
-}
-
-.form__group {
-  display: flex;
+  padding-bottom: 1rem;
 }
 
 .reservation__title {
   font-family: "Yeseva One";
   font-weight: 400;
-  font-size: 2.25rem;
+  font-size: 1.55rem;
   line-height: 1.5rem;
   color: #cc9900;
-  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .reservation__title {
+    font-size: 2.25rem;
+    margin-top: 0;
+  }
+}
+
+.image-decor--golden {
+  width: 150px;
+  height: 30px;
+  width: 200px;
+}
+.reservation__img-wrap {
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 480px) {
+  .reservation__img-wrap:last-child {
+    margin-left: 1rem;
+  }
+}
+
+.reservation__img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .reservation__text {
@@ -932,27 +1063,13 @@ html {
   font-size: 1rem;
   line-height: 1.5rem;
   color: #4c4c4c;
-  text-align: center;
-}
-
-.form__btn {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  padding: 0.5625rem 3.75rem;
-  font-family: "Open Sans";
-  font-weight: 400;
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: rgba(200, 159, 45, 0.98);
-  border: 1px solid #c89f2d;
 }
 
 .label {
+  font-family: "Open Sans";
   font-size: 0.875rem;
   color: #c9a131;
   font-weight: 700;
-  font-family: "Open Sans";
 }
 
 .name {
@@ -965,17 +1082,66 @@ html {
   border: 1px solid #e1d1a4;
 }
 
+.form__btn {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.5625rem 2.75rem;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: rgba(200, 159, 45, 0.98);
+  border: 1px solid #c89f2d;
+}
+
+.form-number {
+  padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 480px) {
+  .form-number {
+    margin-left: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .form-number {
+    margin-left: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .form__group {
+    display: flex;
+    justify-content: center;
+    margin-left: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .form__group {
+    display: flex;
+    max-height: 508px;
+  }
+}
+
+.cherry {
+  margin-left: 1.5rem;
+}
+
+.label__form {
+  text-align: left;
+}
 .footer {
+  text-align: center;
   background-color: #191919;
   --fill-dark: #fff;
 }
 
-.footer__group {
-  padding-top: 50px 0;
-  display: grid;
-  max-width: 1100px;
-  margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
+@media screen and (min-width: 480px) {
+  .footer__group {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .footer__title {
@@ -996,33 +1162,22 @@ html {
   color: #ffffff;
 }
 
-.image-decor--colored {
-  padding-left: 100px;
-}
-
-.social__footer {
-  text-align: center;
-}
-
-.social__icon--colored {
-  color: #fff;
-}
-
-.payments {
-  text-align: center;
-}
-
 .payments-card {
   text-decoration: none;
   padding: 0 5px;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: #666666;
   font-weight: 700;
   font-family: "Open Sans";
   border: 1px solid #ffffff;
   background: #fff;
   border-radius: 3px;
+  border: 1px solid #fff;
+}
+
+.footer__text {
+  padding-bottom: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
