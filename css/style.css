@@ -620,6 +620,10 @@ html {
   margin-right: 10px;
 }
 
+.social__icon:hover {
+  color: #ff00ff;
+}
+
 .content {
   text-align: center;
   padding-top: 40px;
@@ -684,7 +688,7 @@ html {
 }
 
 .btn__item--black:hover {
-  background: #d554dd;
+  background: #00ff00;
 }
 
 .btn__item--white {
@@ -1198,7 +1202,11 @@ html {
   border: 1px solid #ffffff;
   background: #fff;
   border-radius: 3px;
-  border: 1px solid #fff;
+  border: none;
+}
+
+.payments-card:hover {
+  background: #00ff00;
 }
 
 .footer__text {
