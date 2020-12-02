@@ -2,6 +2,7 @@
 
 
 .reservation 
+    background: url(../img/pattern.png), url(../img/recervation.png) 
     text-align: center
     padding: 1rem 0
     --fill-dark: #cc9900
@@ -54,24 +55,31 @@
     font-size: 1rem
     line-height: 1.5rem
     color: #4c4c4c
-   
+.menu__top 
+    text-align: center
+    
+    +media(480px)
+        display: flex
+        justify-content: center
+.menu__link--date      
+    +media(480px)
+        width: 50%
+.menu__link--name
+    +media(480px)
+        margin-left: 20px
+        width: 50%
 .label
-   
+    text-align: left
     font-family: "Open Sans"
     font-size: 0.875rem
     color: #c9a131
     font-weight: 700
+    margin-bottom: 1rem
+    list-style-type: none
+    text-decoration: none
 
-    
-.name
-    padding: 9px 10px 9px 15px
-    font-size: 1rem
-    color: #7c7c7c
-    font-weight: 400
-    font-style: italic
-    font-family: "Open Sans"
-    border: 1px solid #e1d1a4
-
+.icon
+    height: 80%
 .form__btn
     display: block
     text-align: center
@@ -82,30 +90,72 @@
     font-size: 1rem
     color: #ffffff
     background-color: rgba(200,159,45,0.98)
-    border: 1px solid #c89f2d
+    border: none
+    transition: 0.4s
 .form__btn:hover 
     background: #38e822
-.form-number 
-    padding-bottom: 1.5rem
-    +media(480px)
-        margin-left: 1.5rem
-    +media(992px)
-        margin-left: 1.5rem
-.form__group
-    
-    +media(480px)
-        display: flex
-        justify-content: center
-        margin-left: 2rem
-    +media(992px) 
-        display: flex
-        max-height: 508px
+    transition: 0.4s
+
 .cherry 
     margin-left: 1.5rem
-.label__form 
-    +media(480px)
+.nav-menu 
+    padding: 0
+.name 
+    position: relative
+    display: flex
+    justify-content: space-between
+    
+.name:hover .name__list 
+    display: block
+    transition: 0.3s
     text-align: left
-.input-field:hover 
-    background: #38e822
+    margin-top: 2rem
 
+.name__list 
+    position: absolute
+    display: none
+    padding: 15px 10px
+    // здесь
+    min-height: 50%
+    width: 100%
+    list-style-type: none
+    margin-top: 2rem
+    background: #c3c3c3 
+    // min-width: 160px
+    text-align: left
+    // z-index: 1
+    text-decoration: none
 
+.sub-name__list 
+    list-style-type: none
+
+// .name__link 
+    // padding: 12px 16px
+    
+.name__link 
+    text-decoration: none 
+    margin-bottom: 5px
+.name-dishes:hover 
+    display: block
+
+.menu__link 
+    text-align: left
+
+.name
+    display: flex
+    
+    font-family: "Open Sans"
+    font-weight: 400
+    background: #ffffff
+    font-style: italic
+    padding: 9px 10px 9px 15px
+    font-size: 1rem
+    color: #7c7c7c
+    border: none
+    width: 100%
+    border: 1px solid #dedfdf
+    &-colored 
+        border: 1px solid #e2d3a5   
+
+.menu-style
+    list-style-type: none
