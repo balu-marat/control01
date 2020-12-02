@@ -957,6 +957,7 @@ html {
 
 .price-btn:hover {
   background: #ec1313;
+  color: #ffff00;
   transition: 0.4s;
 }
 
@@ -1166,6 +1167,7 @@ html {
   background-color: rgba(200, 159, 45, 0.98);
   border: none;
   transition: 0.4s;
+  margin-bottom: 8px;
 }
 
 .form__btn:hover {
@@ -1226,6 +1228,7 @@ html {
 
 .name {
   display: flex;
+  margin-bottom: 1.5rem;
   font-family: "Open Sans";
   font-weight: 400;
   background: #ffffff;
@@ -1243,6 +1246,7 @@ html {
 
 .menu-style {
   list-style-type: none;
+  margin-bottom: 0.5rem;
 }
 
 .footer {
@@ -1293,12 +1297,18 @@ html {
 }
 
 .payments-card:hover {
-  background: #00ff00;
+  background: #0000ff;
+  color: #00ffbb;
   transition: 0.4s;
 }
 
 .footer__text {
   padding-bottom: 1rem;
+}
+
+.social__icon-trello:hover {
+  color: #ffffff;
+  transition: 0.4s;
 }
 
 /*# sourceMappingURL=style.css.map */
