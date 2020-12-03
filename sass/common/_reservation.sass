@@ -55,28 +55,18 @@
     font-size: 1rem
     line-height: 1.5rem
     color: #4c4c4c
-.menu__top 
-    text-align: center
-    
-    +media(480px)
-        display: flex
-        justify-content: center
-.menu__link--date      
-    +media(480px)
-        width: 50%
-.menu__link--name
-    +media(480px)
-        margin-left: 20px
-        width: 50%
+
 .label
     text-align: left
     font-family: "Open Sans"
     font-size: 0.875rem
     color: #c9a131
     font-weight: 700
-    margin-bottom: 1rem
+    margin-bottom: 8px
     list-style-type: none
     text-decoration: none
+    +media(480px)
+        margin-bottom: 10px
 
 .icon
     height: 80%
@@ -92,72 +82,60 @@
     background-color: rgba(200,159,45,0.98)
     border: none
     transition: 0.4s
-    margin-bottom: 8px
+    margin-top: 25px
+    +media(480px)
+        margin-top: 30px
+    +media(992px)
+        margin-top: 21px
+   
 .form__btn:hover 
     background: #38e822
+    color: #0808fe
     transition: 0.4s
 
 .cherry 
     margin-left: 1.5rem
-.nav-menu 
-    padding: 0
-.name 
-    position: relative
-    display: flex
-    justify-content: space-between
-    
-.name:hover .name__list 
-    display: block
-    transition: 0.3s
-    text-align: left
-    margin-top: 2rem
 
-.name__list 
-    position: absolute
-    display: none
-    padding: 15px 10px
-    // здесь
-    min-height: 50%
+.input-group
+    display: flex
+    align-items: center
+    padding: 8px
+    background: #f7f8f8
+    outline: 1px solid  #dedfdf
+.input-group-colored
+    outline: 1px solid  #cc9900
+.res-input
     width: 100%
-    list-style-type: none
-    margin-top: 2rem
-    background: #c3c3c3 
-    // min-width: 160px
-    text-align: left
-    // z-index: 1
-    text-decoration: none
-
-.sub-name__list 
-    list-style-type: none
-
-// .name__link 
-    // padding: 12px 16px
-    
-.name__link 
-    text-decoration: none 
-    margin-bottom: 5px
-.name-dishes:hover 
-    display: block
-
-.menu__link 
-    text-align: left
-   
-.name
-    display: flex
-    margin-bottom: 1.5rem
-    font-family: "Open Sans"
-    font-weight: 400
-    background: #ffffff
-    font-style: italic
-    padding: 9px 10px 9px 15px
-    font-size: 1rem
-    color: #7c7c7c
+    background: none
     border: none
-    width: 100%
-    border: 1px solid #dedfdf
-    &-colored 
-        border: 1px solid #e2d3a5   
+.res-top 
+    +media(480px)
+        display: flex
+        justify-content: center
+        width: 100%
+    +media(768px)
 
-.menu-style
-    list-style-type: none
-    margin-bottom: 0.5rem
+.res-top-left 
+    +media(480px)
+        width: 50%
+    +media(768px)
+        width: 40% 
+    +media(992px)
+        width: 50% 
+.res-top-right 
+    +media(480px)
+        width: 50%
+    +media(768px)
+        width: 40%
+    +media(992px)
+        width: 50% 
+.input-group-right
+    +media(480px)
+        margin-left: 30px
+
+.res-input 
+    font-size: 16px
+    color: #7c7c7c
+    font-weight: 400
+    font-style: italic
+    font-family: "Open Sans"

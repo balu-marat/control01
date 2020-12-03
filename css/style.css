@@ -787,7 +787,7 @@ html {
 }
 
 .ingredients {
-  background: url(../img/ingredients.jpg) right 0/cover;
+  background: url(../img/ingredients.jpg) left 0/cover;
   max-width: 100%;
   height: auto;
   padding: 5rem 0;
@@ -976,7 +976,7 @@ html {
 }
 
 .reviews {
-  background: url(../img/lambd.jpg) 100% 100% no-repeat;
+  background: url(../img/lambd.jpg) center no-repeat;
   background-size: cover;
   padding: 5rem 0;
 }
@@ -1117,38 +1117,20 @@ html {
   color: #4c4c4c;
 }
 
-.menu__top {
-  text-align: center;
-}
-@media screen and (min-width: 480px) {
-  .menu__top {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .menu__link--date {
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .menu__link--name {
-    margin-left: 20px;
-    width: 50%;
-  }
-}
-
 .label {
   text-align: left;
   font-family: "Open Sans";
   font-size: 0.875rem;
   color: #c9a131;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 8px;
   list-style-type: none;
   text-decoration: none;
+}
+@media screen and (min-width: 480px) {
+  .label {
+    margin-bottom: 10px;
+  }
 }
 
 .icon {
@@ -1167,11 +1149,22 @@ html {
   background-color: rgba(200, 159, 45, 0.98);
   border: none;
   transition: 0.4s;
-  margin-bottom: 8px;
+  margin-top: 25px;
+}
+@media screen and (min-width: 480px) {
+  .form__btn {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .form__btn {
+    margin-top: 21px;
+  }
 }
 
 .form__btn:hover {
   background: #38e822;
+  color: #0808fe;
   transition: 0.4s;
 }
 
@@ -1179,74 +1172,75 @@ html {
   margin-left: 1.5rem;
 }
 
-.nav-menu {
-  padding: 0;
-}
-
-.name {
-  position: relative;
+.input-group {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: #f7f8f8;
+  outline: 1px solid #dedfdf;
 }
 
-.name:hover .name__list {
-  display: block;
-  transition: 0.3s;
-  text-align: left;
-  margin-top: 2rem;
+.input-group-colored {
+  outline: 1px solid #cc9900;
 }
 
-.name__list {
-  position: absolute;
-  display: none;
-  padding: 15px 10px;
-  min-height: 50%;
+.res-input {
   width: 100%;
-  list-style-type: none;
-  margin-top: 2rem;
-  background: #c3c3c3;
-  text-align: left;
-  text-decoration: none;
-}
-
-.sub-name__list {
-  list-style-type: none;
-}
-
-.name__link {
-  text-decoration: none;
-  margin-bottom: 5px;
-}
-
-.name-dishes:hover {
-  display: block;
-}
-
-.menu__link {
-  text-align: left;
-}
-
-.name {
-  display: flex;
-  margin-bottom: 1.5rem;
-  font-family: "Open Sans";
-  font-weight: 400;
-  background: #ffffff;
-  font-style: italic;
-  padding: 9px 10px 9px 15px;
-  font-size: 1rem;
-  color: #7c7c7c;
+  background: none;
   border: none;
-  width: 100%;
-  border: 1px solid #dedfdf;
-}
-.name-colored {
-  border: 1px solid #e2d3a5;
 }
 
-.menu-style {
-  list-style-type: none;
-  margin-bottom: 0.5rem;
+@media screen and (min-width: 480px) {
+  .res-top {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .res-top-left {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .res-top-left {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .res-top-left {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .res-top-right {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .res-top-right {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .res-top-right {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .input-group-right {
+    margin-left: 30px;
+  }
+}
+
+.res-input {
+  font-size: 16px;
+  color: #7c7c7c;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Open Sans";
 }
 
 .footer {
