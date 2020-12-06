@@ -509,10 +509,9 @@ html {
 
 .header {
   position: relative;
-  background: linear-gradient(to bottom, #1a1717c2 10%, #6a6c4e00), url(../img/banner.jpg) right 0/cover;
+  background: linear-gradient(to bottom, #08090ab4 20%, #656e0205), url(../img/banner.jpg) right 0/cover;
   width: 100%;
   height: 100%;
-  z-index: 1000;
   padding-bottom: 3rem;
 }
 
@@ -527,7 +526,7 @@ html {
 
 .logo__img {
   margin: 0 auto;
-  transform: translateX(25px);
+  transform: translateX(11px);
 }
 @media screen and (min-width: 992px) {
   .logo__img {
@@ -542,7 +541,7 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   z-index: 100;
   display: flex;
   flex-direction: column;
@@ -660,6 +659,11 @@ html {
     font-size: 1.5rem;
   }
 }
+@media screen and (min-width: 375px) {
+  .content__title {
+    font-size: 2.5rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .content__title {
     font-size: 2.85rem;
@@ -667,7 +671,7 @@ html {
 }
 @media screen and (min-width: 992px) {
   .content__title {
-    font-size: 4.85rem;
+    font-size: 4.875rem;
   }
 }
 
@@ -802,6 +806,8 @@ html {
   text-align: center;
   background: rgba(0, 0, 0, 0.5);
   padding: 1rem 1rem;
+  position: relative;
+  min-height: 550px;
 }
 
 @media screen and (min-width: 768px) {
@@ -823,6 +829,10 @@ html {
   }
 }
 
+.ingredients__images {
+  padding-top: 30px;
+}
+
 .ingredients {
   --fill-dark: #ffff;
 }
@@ -841,6 +851,47 @@ html {
   .ingredients__text {
     text-align: center;
   }
+}
+
+.ingredients__top {
+  position: absolute;
+  list-style: none;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: left;
+  bottom: 40px;
+}
+@media screen and (min-width: 375px) {
+  .ingredients__top {
+    margin-left: 35px;
+  }
+}
+@media screen and (min-width: 390px) {
+  .ingredients__top {
+    bottom: 100px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .ingredients__top {
+    padding-left: 90px;
+    bottom: 128px;
+  }
+}
+@media screen and (min-width: 760px) {
+  .ingredients__top {
+    bottom: 90px;
+    padding-left: 80px;
+  }
+}
+
+.ingredients__icon {
+  padding: 5px;
+}
+
+.ing-name {
+  margin-left: 2px;
 }
 
 .menu {
