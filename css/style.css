@@ -822,6 +822,7 @@ html {
   font-weight: 400;
   font-size: 1.5rem;
   color: #ffffff;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .ingredients__title {
@@ -830,11 +831,15 @@ html {
 }
 
 .ingredients__images {
-  padding-top: 30px;
+  padding-top: 45px;
 }
 
 .ingredients {
   --fill-dark: #ffff;
+}
+
+.wheat__img {
+  margin-left: 1rem;
 }
 
 .ingredients__text {
